@@ -114,18 +114,18 @@ class Contact extends React.Component {
         {modalRender}
         <div className="wrapper">
           <Title title="CONTACT US." />
-          <p className="font12">
+          {/**<p className="font12">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt<br></br>ut labore et dolore magna aliqua.
-          </p>
+    </p>*/}
 
           <Row className="padding40">
-            <Col md={12} lg={6}>
+            <Col xl={12} lg={12}>
               <form id="contact-form" onSubmit={this.handleSubmit}>
                 <h4 className="font30 weight800 padding30">Send Us Message.</h4>
                 <input type="text" placeholder="Name" required name="name" value={this.state.name} onChange={this.inputHandler} />
                 <input type="email" placeholder="Email" required name="email" value={this.state.email} onChange={this.inputHandler} />
                 <textarea
-                  rows="6"
+                  rows="12"
                   cols="50"
                   placeholder="Message..."
                   required
@@ -136,11 +136,7 @@ class Contact extends React.Component {
                 {submitButtonRender}
               </form>
             </Col>
-            <Col md={12} lg={6}>
-              <div className="flex-center">
-                <img src={ContactBackground} alt="contact background" />
-              </div>
-            </Col>
+            
           </Row>
           <ContactInfo />
           <ContactSocial />
